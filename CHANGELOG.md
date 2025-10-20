@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.2
+
+- Changed to build on Elixir 1.19/Erlang 28.1
+- updated blake3 version to 1.8.2
+- updated rustler to 0.37
+- updated ex-doc to 0.38
+
 ## v1.0.1
 
 - Fixes

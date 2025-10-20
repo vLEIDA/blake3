@@ -28,3 +28,5 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 blake3-*.tar
 
+.tags
+.tool-versions
