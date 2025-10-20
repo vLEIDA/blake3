@@ -5,7 +5,7 @@
 /priv
 
 # rust build dir.
-/native/blake3/target
+/native/blake3nif/target
 
 # If you run "mix test --cover", coverage assets end up here.
 /cover/
