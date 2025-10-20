@@ -21,8 +21,6 @@ rustler::init!(
 
 fn on_load(env: Env, _info: Term) -> bool {
     env.register::<HasherResource>().is_ok()
-    //resource!(HasherResource, env);
-    //true
 }
 
 mod atoms {
