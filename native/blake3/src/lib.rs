@@ -1,35 +1,28 @@
-#[macro_use]
 extern crate rustler;
 extern crate rustler_codegen;
 
 extern crate blake3;
 
-use rustler::resource::ResourceArc;
-use rustler::{types, Binary, Env, Error, NifResult, OwnedBinary, Term};
 use std::io::Write;
 use std::sync::Mutex;
 
+use rustler::Resource;
+use rustler::ResourceArc;
+use rustler::{types, Binary, Env, Error, NifResult, OwnedBinary, Term};
+
 pub struct HasherResource(Mutex<blake3::Hasher>);
+
+impl Resource for HasherResource {}
 
 rustler::init!(
     "Elixir.Blake3.Native",
-    [
-        hash,
-        new,
-        update,
-        finalize,
-        derive_key,
-        keyed_hash,
-        new_keyed,
-        reset,
-        update_rayon
-    ],
     load = on_load
 );
 
 fn on_load(env: Env, _info: Term) -> bool {
-    resource!(HasherResource, env);
-    true
+    env.register::<HasherResource>().is_ok()
+    //resource!(HasherResource, env);
+    //true
 }
 
 mod atoms {
