@@ -5,7 +5,8 @@ defmodule Blake3.Native do
   """
 
   use Rustler,
-    otp_app: :blake3
+    otp_app: :blake3,
+    crate: :blake3nif
 
   def hash(_str), do: error()
   def new(), do: error()

@@ -29,7 +29,7 @@ defmodule MixBlake3.Project do
 
   defp deps do
     [
-      {:rustler, "~> 0.37"},
+      {:rustler, "~> 0.37", runtime: false},
       {:ex_doc, "~> 0.38", only: [:dev, :test], runtime: false}
     ]
   end
