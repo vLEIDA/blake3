@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.2
+## v1.0.3
 
 - Changed to build on Elixir 1.19/Erlang 28.1
 - updated blake3 version to 1.8.2
